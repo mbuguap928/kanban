@@ -11,7 +11,7 @@ function Navbar () {
                 
                 <div className='nav'>
                     
-                    <p>Dashboard | </p>
+                    <p>Dashboard | Kanban</p>
 
                 </div>
 
