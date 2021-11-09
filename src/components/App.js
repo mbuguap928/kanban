@@ -1,23 +1,20 @@
 import React from 'react';
 import '../styles/App.css';
-import Header from './Header';
-import Footer from './Footer';
-import Dashboard from './Dashboard';
+import{BrowserRouter as Router, Route} from "react-router-dom";
+import Dashboard from '../Pages/Dashboard';
+import Kanban from '../Pages/Kanban'
 
 
 function App() {
- 
   return (
-    <React.Fragment>
-      <div className="container-fluid grey">
-        <Header />
-        <Dashboard/>
-        <Footer />
-
-      </div>
-    </React.Fragment>    
-  )
-}
+    <>
+      <Router>
+        <Route path="/kanban" component={Kanban} />
+        <Route path="/" component={Dashboard} />
+      </Router>
+    </>
+        );
+      }
 
 export default App;
 
