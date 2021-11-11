@@ -4,6 +4,11 @@ import Footer from '../components/Footer';
 import{ useHistory } from "react-router-dom";
 import Card from '../components/Card';
 import NewCard from '../components/NewCard';
+import Title from '../components/Title';
+import Inprogress from '../components/Inprogress';
+import AddCard from '../components/AddCard';
+import Cancel from '../components/Cancel';
+import Reusable from '../components/Reusable';
 
 function Kanban() {
     return (
@@ -16,8 +21,15 @@ function Kanban() {
                             <div className="row">
                                 <div className="col-md-4">
                                     <Card header="To-Do" body="" footer="Add Card"/>
+                                    {/* <div className="container">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">@</span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Title" id="usr" name="Title"/>
+                                        </div>
+                                    </div> */}
                                 </div>
-
                                 <div className="col-md-4">
                                     <NewCard />
                                 </div>
@@ -27,7 +39,6 @@ function Kanban() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <Footer />
                 </div>
