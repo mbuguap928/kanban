@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/Navbar.css';
 import styled from 'styled-components';
+import Add from '../components/Add';
 
 
 const Main = styled("div")`
@@ -48,9 +49,10 @@ const ListItem = styled("li")`
 
 const options = ["Rename", "Clear", "Delete"];
 
-function Card(properties) {
+function Card({cards, key, footer}) {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState(null);
+    const [active, setActive] = useState();
 
     const toggling = () => setIsOpen(!isOpen);
 
@@ -62,52 +64,62 @@ function Card(properties) {
     
     return (
         <React.Fragment>
+        <div className="row">
+            {cards.map(card => (
+                <div className="col">
+                    <div class="card">
+                        <div class="card-header">
 
-            <div class="card">
-                <div class="card-header">
-                    <div className="row">
-                        <div className="col">
-                            {properties.header}
+                            <div className="row">
+                                    <div className="col">
+                                        {card.title}
+                                    </div>
+                                    <div className="col">
+                                        <Main>
+                                            <DropDownContainer>
+                                                <DropDownHeader onClick={toggling}>
+                                                    {selectedOption || "..."}
+                                                </DropDownHeader>
+                                                {isOpen && (
+                                                    <DropDownListContainer>
+                                                        <DropDownList>
+                                                        
+                                                            <ListItem>Rename</ListItem>
+                                                            <ListItem>Clear</ListItem>
+                                                            <ListItem>Delete</ListItem>
+                                                        </DropDownList>
+                                                    </DropDownListContainer>
+                                                )}
+                                            </DropDownContainer>
+                                        </Main>
+                                    </div>
+                            </div>   
+                        
                         </div>
-                        <div className="col">
-                            <Main>
-                                <DropDownContainer>
-                                    <DropDownHeader onClick={toggling}>
-                                        {selectedOption || "..."}
-                                    </DropDownHeader>
-                                    {isOpen && (
-                                        <DropDownListContainer>
-                                            <DropDownList>
-                                               
-                                                <ListItem>Rename</ListItem>
-                                                <ListItem>Clear</ListItem>
-                                                <ListItem>Delete</ListItem>
-                                            </DropDownList>
-                                        </DropDownListContainer>
-                                    )}
-                                </DropDownContainer>
-                            </Main>
+                        <div class="card-body">{card.cards.map(cardBody => (
+                            <div>
+                                <h3>{cardBody.title}</h3>
+                                <h3>{cardBody.description}</h3>
+                            </div>
+                            ))}
+                        </div> 
+                        <div class="card-footer">
+                            <button 
+                                type="button" 
+                                className="btn btn-light btn-block"
+                                onClick={() => setActive("AddCard")}
+                            >
+                                Add Card
+                            </button>
                         </div>
-                    </div>    
+                    </div>
                 </div>
-                <div class="card-body">{properties.body}</div> 
-                <div class="card-footer">{properties.footer}</div>
-            </div>
+            ))}
 
+{active === "AddCard" && <Add />}
+        </div>    
         </React.Fragment>
     )
 }
 
 export default Card;
-
-{/* <div className="dropdown">
-                                <button type="button" className="btn btn-link dropdown-toggle" data-toggle="dropdown">
-                                    ...
-                                </button>
-                                <div className="dropdown-menu">
-                                    <a className="dropdown-item" href="/">Link 1</a>
-                                    <a className="dropdown-item" href="/">Link 2</a>
-                                    <a className="dropdown-item" href="/">Link 3</a>
-                                </div>
-                            </div> */}
-

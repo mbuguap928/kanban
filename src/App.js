@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import{BrowserRouter as Router, Switch,Link,Route} from "react-router-dom";
 import Dashboard from "./Pages/Dashboard";
 import Kanban from "./Pages/Kanban";
 
 
 function App() {
+  const [active,setActive]= useState("FirstCard");
   return (
     <>
      <Router>
