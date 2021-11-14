@@ -32,9 +32,9 @@ const data =  [
         ],
     },
     {
-        id: 1,
-        title: "To-Do",
-        cards: [
+                id: 1,
+                title: "To-Do",
+                cards: [
             {
                 id: 1,
                 title: "Create a Kanban using React",
