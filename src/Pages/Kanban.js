@@ -6,8 +6,6 @@ import Card from '../components/Card';
 import NewCard from '../components/NewCard';
 import Title from '../components/Title';
 import Inprogress from '../components/Inprogress';
-import Cancel from '../components/Cancel';
-import Reusable from '../components/Reusable';
 import Data from '../components/Data'
 
 
