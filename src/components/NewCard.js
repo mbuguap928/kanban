@@ -5,6 +5,9 @@ function NewCard(){
         <div>
             <button type="button" className="btn btn-light btn-block">
                 Add Column
+                
+                
+                
             </button>
         </div>
     );
