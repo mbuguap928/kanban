@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { v4 } from "uuid";
+
 const data =  [
     {
         id: 1,
@@ -17,7 +20,7 @@ const data =  [
     },
     {
         id: 1,
-        title: "To-Do",
+        title: "In Progres",
         cards: [
             {
                 id: 1,
@@ -33,7 +36,7 @@ const data =  [
     },
     {
                 id: 1,
-                title: "To-Do",
+                title: "Done",
                 cards: [
             {
                 id: 1,
@@ -48,5 +51,41 @@ const data =  [
         ],
     },
 ];
+
+const item= {
+    id:v4(),
+    name:"Create a kanban using React",
+
+};
+
+const item2={
+    id:v4(),
+    name:"Cook an awesome dinner",
+};
+
+function Data() {
+    const[text,setText]=useState("")
+    const[state,setState]=useState({
+        todo:{
+            tile:"To Do",
+            items:[item],
+        },
+        "in-progress":{
+            title:"In Progress",
+            items:[item2],
+        },
+        done:{
+            title:"Completed",
+            items:[],
+        },
+    });
+}
+
+
+
+
+
+
+
 
 export default data;

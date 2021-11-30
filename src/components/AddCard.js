@@ -10,4 +10,11 @@ function AddCard(){
     );
 }
 
+<div className="AddCard">
+<div>
+  <input type="text" value={text} onChange={(e)=>setText(e.target.value)}/>
+  <button onClick={addItem}>Add</button>
+</div>
+</div>
+
 export default AddCard;
