@@ -7,6 +7,8 @@ import NewCard from '../components/NewCard';
 import Title from '../components/Title';
 import Inprogress from '../components/Inprogress';
 import Data from '../components/Data'
+import { result } from 'lodash';
+
 
 
 function Kanban() {
@@ -27,6 +29,9 @@ function Kanban() {
     )
 }
 
+
+
+
 function Push() {
 
     let history=useHistory()
@@ -40,5 +45,8 @@ function Push() {
     );
 
 }
+
+
+
 
 export default Kanban;

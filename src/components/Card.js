@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../styles/Navbar.css';
 import styled from 'styled-components';
 import Add from '../components/Add';
+import { DragDropContext } from 'react-beautiful-dnd';
 
 
 const Main = styled("div")`

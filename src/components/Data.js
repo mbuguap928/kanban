@@ -1,5 +1,8 @@
-import { useState } from "react";
-import { v4 } from "uuid";
+import { result } from "lodash";
+import React, { useState } from "react";
+import { DragDropContext } from "react-beautiful-dnd";
+import { Droppable } from "react-beautiful-dnd";
+
 
 const data =  [
     {
@@ -52,34 +55,8 @@ const data =  [
     },
 ];
 
-const item= {
-    id:v4(),
-    name:"Create a kanban using React",
 
-};
 
-const item2={
-    id:v4(),
-    name:"Cook an awesome dinner",
-};
-
-function Data() {
-    const[text,setText]=useState("")
-    const[state,setState]=useState({
-        todo:{
-            tile:"To Do",
-            items:[item],
-        },
-        "in-progress":{
-            title:"In Progress",
-            items:[item2],
-        },
-        done:{
-            title:"Completed",
-            items:[],
-        },
-    });
-}
 
 
 
