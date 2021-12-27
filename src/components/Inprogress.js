@@ -10,4 +10,4 @@ function Inprogress(){
     );
 }
 
-export default Inprogress;
+export default Inprogress
