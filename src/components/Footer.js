@@ -22,7 +22,7 @@ function Footer () {
                         <div className="col-md-4">
                             <div className="footer-links-slogan float-md-right">
                                
-                            
+                            </div>
 
                         </div>
 

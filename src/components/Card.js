@@ -117,7 +117,7 @@ function Card({cards, key, footer}) {
                 </div>
             ))}
 
-{active === "AddCard"  <Add />}
+{active === "AddCard" && <Add />}
         </div>    
         </React.Fragment>
     )
