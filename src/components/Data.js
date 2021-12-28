@@ -50,7 +50,7 @@ const data =  [
                 id: 2,
                 title: "Cook dinner",
                 description: "Cook an awesome dinner.",
-            }
+            },
         ],
     },
 ];
