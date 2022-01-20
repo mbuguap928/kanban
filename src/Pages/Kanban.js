@@ -30,8 +30,6 @@ function Kanban() {
 }
 
 
-
-
 function Push() {
 
     let history=useHistory()
