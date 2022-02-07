@@ -25,7 +25,7 @@ function Footer () {
                                
                             </div>
 
-                        </div
+                        </div>
 
                       <div className="col-12">
                             <p className="text-center copyrights">COPYRIGHT, PETER</p>
